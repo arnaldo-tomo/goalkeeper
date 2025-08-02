@@ -24,7 +24,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const AnalyticsScreen = ({ navigation }) => {
+export const AnalyticsScreen = ({ navigation }) => {
   // ========================================
   // ESTADO
   // ========================================
@@ -911,4 +911,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { NotesScreen, AnalyticsScreen };

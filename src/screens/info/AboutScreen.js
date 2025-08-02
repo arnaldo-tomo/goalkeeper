@@ -1,4 +1,4 @@
-const AboutScreen = () => {
+export const AboutScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
@@ -353,14 +353,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { 
-  EditProfileScreen,
-  SecurityScreen,
-  NotificationSettingsScreen,
-  ThemeSettingsScreen,
-  AboutScreen,
-  HelpScreen,
-  ContactScreen,
-  PrivacyScreen,
-  TermsScreen
-};

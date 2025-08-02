@@ -1,4 +1,4 @@
-const HelpScreen = () => {
+export const HelpScreen = () => {
   const [expandedItem, setExpandedItem] = useState(null);
 
   const faqItems = [
@@ -384,14 +384,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { 
-  EditProfileScreen,
-  SecurityScreen,
-  NotificationSettingsScreen,
-  ThemeSettingsScreen,
-  AboutScreen,
-  HelpScreen,
-  ContactScreen,
-  PrivacyScreen,
-  TermsScreen
-};

@@ -1,4 +1,4 @@
-const CreateGoalScreen = ({ navigation }) => {
+export const CreateGoalScreen = ({ navigation }) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -504,5 +504,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export { LoginScreen, RegisterScreen, GoalsScreen, CreateGoalScreen };

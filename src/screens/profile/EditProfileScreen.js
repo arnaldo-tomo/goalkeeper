@@ -15,7 +15,7 @@ import useAuthStore from '../../store/useAuthStore';
 import { theme } from '../../constants/theme';
 import { hapticFeedback } from '../../utils/haptics';
 
-const EditProfileScreen = ({ navigation }) => {
+export const EditProfileScreen = ({ navigation }) => {
   const { user, updateProfile } = useAuthStore();
   const [formData, setFormData] = useState({
     name: '',
@@ -411,15 +411,3 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 });
-
-export { 
-  EditProfileScreen,
-  SecurityScreen,
-  NotificationSettingsScreen,
-  ThemeSettingsScreen,
-  AboutScreen,
-  HelpScreen,
-  ContactScreen,
-  PrivacyScreen,
-  TermsScreen
-};

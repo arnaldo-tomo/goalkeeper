@@ -1,4 +1,4 @@
-const ContactScreen = () => {
+export const ContactScreen = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -414,14 +414,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { 
-  EditProfileScreen,
-  SecurityScreen,
-  NotificationSettingsScreen,
-  ThemeSettingsScreen,
-  AboutScreen,
-  HelpScreen,
-  ContactScreen,
-  PrivacyScreen,
-  TermsScreen
-};

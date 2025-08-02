@@ -16,7 +16,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import useAuthStore from '../../store/useAuthStore';
 
-const LoginScreen = ({ navigation }) => {
+export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -399,4 +399,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { LoginScreen, RegisterScreen, GoalsScreen, CreateGoalScreen };

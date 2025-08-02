@@ -14,7 +14,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import useAuthStore from '../store/useAuthStore';
 
-const ProfileScreen = ({ navigation }) => {
+export const ProfileScreen = ({ navigation }) => {
   const { user, logout, updateProfile } = useAuthStore();
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   
@@ -280,71 +280,7 @@ const ProfileScreen = ({ navigation }) => {
   );
 };
 
-const ProfileScreen = ({ navigation }) => {
-  const { user, logout } = useAuthStore();
 
-  const handleLogout = () => {
-    Alert.alert(
-      'Sair da Conta',
-      'Tem certeza que deseja sair?',
-      [
-        { text: 'Cancelar', style: 'cancel' },
-        { text: 'Sair', style: 'destructive', onPress: logout }
-      ]
-    );
-  };
-
-  return (
-    <ScrollView style={styles.container}>
-      <LinearGradient
-        colors={[theme.colors.primary[500], theme.colors.primary[700]]}
-        style={styles.profileHeader}
-      >
-        <View style={styles.avatarContainer}>
-          <Text style={styles.avatarText}>
-            {user?.name?.charAt(0)?.toUpperCase() || 'U'}
-          </Text>
-        </View>
-        <Text style={styles.userName}>{user?.name || 'Usuário'}</Text>
-        <Text style={styles.userEmail}>{user?.email || 'email@exemplo.com'}</Text>
-      </LinearGradient>
-
-      <View style={styles.statsContainer}>
-        <View style={styles.statCard}>
-          <Text style={styles.statNumber}>12</Text>
-          <Text style={styles.statLabel}>Metas Concluídas</Text>
-        </View>
-        <View style={styles.statCard}>
-          <Text style={styles.statNumber}>{user?.streak_days || 0}</Text>
-          <Text style={styles.statLabel}>Dias Seguidos</Text>
-        </View>
-        <View style={styles.statCard}>
-          <Text style={styles.statNumber}>85%</Text>
-          <Text style={styles.statLabel}>Taxa de Sucesso</Text>
-        </View>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Configurações</Text>
-        <MenuItem
-          icon="settings-outline"
-          title="Configurações Gerais"
-          onPress={() => navigation.navigate('Settings')}
-        />
-        <MenuItem
-          icon="analytics-outline"
-          title="Relatórios"
-          onPress={() => navigation.navigate('Analytics')}
-        />
-      </View>
-
-      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-        <Ionicons name="log-out-outline" size={20} color={theme.colors.error[500]} />
-        <Text style={styles.logoutText}>Sair da Conta</Text>
-      </TouchableOpacity>
-    </ScrollView>
-  );
-};
 
 // Estilos
 const styles = StyleSheet.create({
@@ -611,12 +547,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export { 
-  CreateNoteScreen, 
-  NoteDetailScreen, 
-  EditNoteScreen, 
-  CreateReminderScreen,
-  RemindersScreen,
-  SettingsScreen,
-  ProfileScreen
-};

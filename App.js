@@ -59,7 +59,9 @@ import TermsScreen from './src/screens/info/TermsScreen';
 
 // Utils
 import { registerForPushNotificationsAsync } from './src/utils/notifications';
+// Theme
 import { theme } from './src/constants/theme';
+
 
 // Keep splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();

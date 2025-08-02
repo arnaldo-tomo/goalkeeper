@@ -22,7 +22,7 @@ import useGoalsStore from '../store/useGoalsStore';
 
 // Components
 import { ProgressRing } from '../components/goals/ProgressRing';
-import { QuickActions } from '../components/widgets/QuickActions';
+import { QuickActions } from '../components/widgets/QuickActions.js';
 import { ProgressChart } from '../components/charts/ProgressChart';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import EmptyState from '../components/common/EmptyState';

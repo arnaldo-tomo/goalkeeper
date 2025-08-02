@@ -1,4 +1,4 @@
-const PrivacyScreen = () => {
+export const PrivacyScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
@@ -351,15 +351,3 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 });
-
-export { 
-  EditProfileScreen,
-  SecurityScreen,
-  NotificationSettingsScreen,
-  ThemeSettingsScreen,
-  AboutScreen,
-  HelpScreen,
-  ContactScreen,
-  PrivacyScreen,
-  TermsScreen
-};
