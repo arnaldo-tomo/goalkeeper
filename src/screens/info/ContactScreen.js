@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import { ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
+import { theme } from '../../constants/theme'; // Adicionado import
 export const ContactScreen = () => {
   const [formData, setFormData] = useState({
     name: '',
