@@ -13,6 +13,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 import ApiService from '../../services/api';
+import { theme } from '../../constants/theme';
 
 
 

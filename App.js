@@ -472,32 +472,37 @@ export default function App() {
 
 // Styles
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#F8F9FA',
   },
-  loadingContent: {
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     padding: 40,
+    backgroundColor: '#F8F9FA',
   },
-  loadingTitle: {
-    fontSize: 32,
+  errorTitle: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#212121',
     marginTop: 20,
-    marginBottom: 8,
+    marginBottom: 16,
+    textAlign: 'center',
   },
-  loadingSubtitle: {
+  errorMessage: {
     fontSize: 16,
-    color: 'rgba(255,255,255,0.8)',
-    marginBottom: 30,
-  },
-  loadingSpinner: {
-    marginTop: 20,
+    color: '#666',
+    textAlign: 'center',
+    lineHeight: 24,
   },
 });
-
 // Error Boundary Component (opcional, mas recomendado)
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -532,29 +537,5 @@ export class ErrorBoundary extends React.Component {
   }
 }
 
-// Adicionar estilos para Error Boundary
-const errorStyles = StyleSheet.create({
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 40,
-    backgroundColor: theme.colors.background.default,
-  },
-  errorTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: theme.colors.text.primary,
-    marginTop: 20,
-    marginBottom: 16,
-    textAlign: 'center',
-  },
-  errorMessage: {
-    fontSize: 16,
-    color: theme.colors.text.secondary,
-    textAlign: 'center',
-    lineHeight: 24,
-  },
-});
 
-Object.assign(styles, errorStyles);
+

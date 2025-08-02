@@ -319,8 +319,15 @@ export const GoalDetailScreen = ({ route, navigation }) => {
 };
 
 
-// Adicionar estilos específicos para as novas telas
-const additionalStyles = StyleSheet.create({
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 40,
+    backgroundColor: '#F8F9FA',
+  },
   // Goal Detail Styles
   headerCard: {
     margin: 16,
@@ -682,7 +689,4 @@ const additionalStyles = StyleSheet.create({
     color: '#666',
   },
 });
-
-// Combinar todos os estilos
-Object.assign(styles, additionalStyles);
 

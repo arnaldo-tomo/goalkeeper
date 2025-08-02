@@ -1,5 +1,7 @@
 import { ScrollView, Text, View } from "react-native";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
+import { theme } from "../../constants/theme";
+import { StyleSheet } from "react-native";
 
 export const NoteDetailScreen = ({ route, navigation }) => {
   const { noteId } = route.params;
