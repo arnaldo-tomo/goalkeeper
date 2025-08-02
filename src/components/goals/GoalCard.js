@@ -8,6 +8,10 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import ProgressRing from './ProgressRing.js';
+// 📊 ProgressRing.js - Anel de progresso estilo Apple Watch
+import React from 'react';
+import { View } from 'react-native';
+import Svg, { Circle, Text as SvgText } from 'react-native-svg';
 
 const GoalCard = ({ 
   goal, 
@@ -109,10 +113,6 @@ const GoalCard = ({
   );
 };
 
-// 📊 ProgressRing.js - Anel de progresso estilo Apple Watch
-import React from 'react';
-import { View } from 'react-native';
-import Svg, { Circle, Text as SvgText } from 'react-native-svg';
 
 const ProgressRing = ({ 
   progress, 

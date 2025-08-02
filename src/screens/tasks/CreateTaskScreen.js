@@ -24,7 +24,7 @@ import { hapticFeedback } from '../../utils/haptics';
 import { theme } from '../../constants/theme';
 import { priorities } from '../../constants/priorities';
 
-const CreateTaskScreen = ({ route, navigation }) => {
+export const CreateTaskScreen = ({ route, navigation }) => {
   const { goalId, goalTitle } = route.params;
   
   // ========================================
@@ -351,3 +351,143 @@ const CreateTaskScreen = ({ route, navigation }) => {
     </KeyboardAvoidingView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F8F9FA',
+  },
+  scrollContent: {
+    padding: 16,
+  },
+  headerButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+  },
+  headerButtonDisabled: {
+    opacity: 0.5,
+  },
+  headerButtonText: {
+    color: '#2196F3',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  section: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#212121',
+    marginBottom: 16,
+  },
+  inputGroup: {
+    marginBottom: 20,
+  },
+  inputLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#212121',
+    marginBottom: 8,
+  },
+  textInput: {
+    backgroundColor: '#F8F9FA',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    fontSize: 16,
+    color: '#212121',
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+  },
+  textArea: {
+    height: 100,
+    textAlignVertical: 'top',
+  },
+  priorityContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  priorityChip: {
+    flex: 1,
+    backgroundColor: '#F0F0F0',
+    borderRadius: 12,
+    paddingVertical: 12,
+    marginHorizontal: 4,
+    alignItems: 'center',
+  },
+  priorityChipActive: {
+    backgroundColor: '#2196F3',
+  },
+  priorityText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#666',
+  },
+  priorityTextActive: {
+    color: 'white',
+  },
+  dateButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F8F9FA',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+  },
+  dateButtonText: {
+    fontSize: 16,
+    color: '#666',
+    marginLeft: 8,
+  },
+  durationGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  durationChip: {
+    width: '22%',
+    backgroundColor: '#F0F0F0',
+    borderRadius: 8,
+    paddingVertical: 8,
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  durationChipActive: {
+    backgroundColor: '#2196F3',
+  },
+  durationText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#666',
+  },
+  durationTextActive: {
+    color: 'white',
+  },
+  submitButton: {
+    backgroundColor: '#2196F3',
+    borderRadius: 12,
+    height: 56,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  submitButtonDisabled: {
+    backgroundColor: '#CCC',
+  },
+  submitButtonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
