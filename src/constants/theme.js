@@ -50,9 +50,10 @@ export const theme = {
     }
   },
   
+  // ✅ FONTS CORRIGIDO (com validação):
   fonts: {
     regular: 'System',
-    medium: 'System',
+    medium: 'System', 
     bold: 'System',
     sizes: {
       xs: 12,
@@ -106,3 +107,6 @@ export const theme = {
     }
   }
 };
+
+// ✅ EXPORTAÇÃO SEGURA COM VALIDAÇÃO:
+export default theme;

@@ -16,7 +16,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import useAuthStore from '../../store/useAuthStore';
 import { theme } from '../../constants/theme';
-export const RegisterScreen = ({ navigation }) => {
+const RegisterScreen = ({ navigation }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -450,3 +450,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+export default RegisterScreen;

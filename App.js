@@ -10,8 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
-// Stores
-import useAuthStore from './src/store/useAuthStore';
+
 
 // Auth Screens
 import LoginScreen from './src/screens/auth/LoginScreen';
@@ -61,6 +60,7 @@ import TermsScreen from './src/screens/info/TermsScreen';
 import { registerForPushNotificationsAsync } from './src/utils/notifications';
 // Theme
 import { theme } from './src/constants/theme';
+import useAuthStore from './src/store/useAuthStore';
 
 
 // Keep splash screen visible while we fetch resources

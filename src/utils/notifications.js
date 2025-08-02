@@ -1,9 +1,7 @@
-// 🔔 src/utils/notifications.js - GoalKeeper Notifications Utility
-import { Platform } from 'react-native'; // ✅ ADICIONADO: Import do Platform
+import { Platform } from 'react-native';  // ← ADICIONAR ESTA LINHA
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import Constants from 'expo-constants';
-
 // Configurar como as notificações devem ser tratadas quando o app está em foreground
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
