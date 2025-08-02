@@ -1,3 +1,21 @@
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
+  Alert,
+  ActivityIndicator
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
+
+import useAuthStore from '../../store/useAuthStore';
+import { theme } from '../../constants/theme';
 export const RegisterScreen = ({ navigation }) => {
   const [formData, setFormData] = useState({
     name: '',

@@ -1,5 +1,7 @@
 // Completando o EditTaskScreen que foi cortado anteriormente
 
+import { Platform, StyleSheet } from "react-native";
+
 // ✏️ src/screens/tasks/EditTaskScreen.js - Continuação
 const EditTaskScreen = ({ route, navigation }) => {
   const { taskId } = route.params;

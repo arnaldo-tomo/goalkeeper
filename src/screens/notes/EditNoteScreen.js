@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 const EditNoteScreen = ({ route, navigation }) => {
   const { noteId } = route.params;
   const [note, setNote] = useState(null);

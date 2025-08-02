@@ -1,3 +1,5 @@
+import { StyleSheet } from "react-native";
+
 export const CreateGoalScreen = ({ navigation }) => {
   const [formData, setFormData] = useState({
     title: '',

@@ -1,3 +1,5 @@
+import { StyleSheet } from "react-native";
+
 export const SecurityScreen = ({ navigation }) => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');

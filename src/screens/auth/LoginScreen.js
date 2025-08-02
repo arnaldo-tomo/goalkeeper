@@ -15,6 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 
 import useAuthStore from '../../store/useAuthStore';
+import { theme } from '../../constants/theme';
 
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');

@@ -1,3 +1,5 @@
+// 🔔 src/utils/notifications.js - GoalKeeper Notifications Utility
+import { Platform } from 'react-native'; // ✅ ADICIONADO: Import do Platform
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import Constants from 'expo-constants';
@@ -33,29 +35,37 @@ export const registerForPushNotificationsAsync = async () => {
     }
     
     if (finalStatus !== 'granted') {
-      alert('Permissão de notificação negada!');
+      console.warn('Permissão de notificação negada!');
       return;
     }
     
-    token = (await Notifications.getExpoPushTokenAsync({
-      projectId: Constants.expoConfig.extra.eas.projectId,
-    })).data;
+    try {
+      token = (await Notifications.getExpoPushTokenAsync({
+        projectId: Constants.expoConfig?.extra?.eas?.projectId,
+      })).data;
+    } catch (error) {
+      console.warn('Erro ao obter token de notificação:', error);
+    }
   } else {
-    alert('Deve usar um dispositivo físico para receber push notifications');
+    console.warn('Deve usar um dispositivo físico para receber push notifications');
   }
 
   return token;
 };
 
 export const scheduleLocalNotification = async (title, body, trigger) => {
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title,
-      body,
-      sound: 'default',
-    },
-    trigger,
-  });
+  try {
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title,
+        body,
+        sound: 'default',
+      },
+      trigger,
+    });
+  } catch (error) {
+    console.warn('Erro ao agendar notificação:', error);
+  }
 };
 
 export const scheduleGoalReminder = async (goal, reminderTime) => {
@@ -75,5 +85,9 @@ export const scheduleTaskReminder = async (task, reminderTime) => {
 };
 
 export const cancelAllNotifications = async () => {
-  await Notifications.cancelAllScheduledNotificationsAsync();
+  try {
+    await Notifications.cancelAllScheduledNotificationsAsync();
+  } catch (error) {
+    console.warn('Erro ao cancelar notificações:', error);
+  }
 };
