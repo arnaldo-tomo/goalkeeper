@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+import { theme } from "../../constants/theme";
 
 const EditNoteScreen = ({ route, navigation }) => {
   const { noteId } = route.params;

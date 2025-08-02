@@ -1,4 +1,7 @@
-const NoteDetailScreen = ({ route, navigation }) => {
+import { ScrollView, Text, View } from "react-native";
+import LoadingSpinner from "../../components/common/LoadingSpinner";
+
+export const NoteDetailScreen = ({ route, navigation }) => {
   const { noteId } = route.params;
   const [note, setNote] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
