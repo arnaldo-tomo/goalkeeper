@@ -1,3 +1,4 @@
+// src/constants/theme.js - Versão sem configurações de fontes
 export const theme = {
   colors: {
     primary: {
@@ -48,72 +49,6 @@ export const theme = {
       secondary: '#666666',
       disabled: '#9E9E9E',
     }
-  },
-  
-  // 🔤 Fontes Poppins atualizadas
-  fonts: {
-    thin: 'Poppins-Thin',
-    extraLight: 'Poppins-ExtraLight',
-    light: 'Poppins-Light',
-    regular: 'Poppins-Regular',
-    medium: 'Poppins-Medium',
-    semiBold: 'Poppins-SemiBold',
-    bold: 'Poppins-Bold',
-    extraBold: 'Poppins-ExtraBold',
-    black: 'Poppins-Black',
-    sizes: {
-      xs: 12,
-      sm: 14,
-      md: 16,
-      lg: 18,
-      xl: 20,
-      xxl: 24,
-      xxxl: 32,
-    }
-  },
-  
-  // 🎨 Helper para usar as fontes facilmente
-  typography: {
-    heading1: {
-      fontFamily: 'Poppins-Bold',
-      fontSize: 32,
-      lineHeight: 40,
-    },
-    heading2: {
-      fontFamily: 'Poppins-SemiBold',
-      fontSize: 24,
-      lineHeight: 32,
-    },
-    heading3: {
-      fontFamily: 'Poppins-SemiBold',
-      fontSize: 20,
-      lineHeight: 28,
-    },
-    heading4: {
-      fontFamily: 'Poppins-Medium',
-      fontSize: 18,
-      lineHeight: 24,
-    },
-    body1: {
-      fontFamily: 'Poppins-Regular',
-      fontSize: 16,
-      lineHeight: 24,
-    },
-    body2: {
-      fontFamily: 'Poppins-Regular',
-      fontSize: 14,
-      lineHeight: 20,
-    },
-    caption: {
-      fontFamily: 'Poppins-Regular',
-      fontSize: 12,
-      lineHeight: 16,
-    },
-    button: {
-      fontFamily: 'Poppins-Medium',
-      fontSize: 16,
-      lineHeight: 20,
-    },
   },
   
   spacing: {
