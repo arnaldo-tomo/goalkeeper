@@ -50,11 +50,17 @@ export const theme = {
     }
   },
   
-  // ✅ FONTS CORRIGIDO (com validação):
+  // 🔤 Fontes Poppins atualizadas
   fonts: {
-    regular: 'System',
-    medium: 'System', 
-    bold: 'System',
+    thin: 'Poppins-Thin',
+    extraLight: 'Poppins-ExtraLight',
+    light: 'Poppins-Light',
+    regular: 'Poppins-Regular',
+    medium: 'Poppins-Medium',
+    semiBold: 'Poppins-SemiBold',
+    bold: 'Poppins-Bold',
+    extraBold: 'Poppins-ExtraBold',
+    black: 'Poppins-Black',
     sizes: {
       xs: 12,
       sm: 14,
@@ -64,6 +70,50 @@ export const theme = {
       xxl: 24,
       xxxl: 32,
     }
+  },
+  
+  // 🎨 Helper para usar as fontes facilmente
+  typography: {
+    heading1: {
+      fontFamily: 'Poppins-Bold',
+      fontSize: 32,
+      lineHeight: 40,
+    },
+    heading2: {
+      fontFamily: 'Poppins-SemiBold',
+      fontSize: 24,
+      lineHeight: 32,
+    },
+    heading3: {
+      fontFamily: 'Poppins-SemiBold',
+      fontSize: 20,
+      lineHeight: 28,
+    },
+    heading4: {
+      fontFamily: 'Poppins-Medium',
+      fontSize: 18,
+      lineHeight: 24,
+    },
+    body1: {
+      fontFamily: 'Poppins-Regular',
+      fontSize: 16,
+      lineHeight: 24,
+    },
+    body2: {
+      fontFamily: 'Poppins-Regular',
+      fontSize: 14,
+      lineHeight: 20,
+    },
+    caption: {
+      fontFamily: 'Poppins-Regular',
+      fontSize: 12,
+      lineHeight: 16,
+    },
+    button: {
+      fontFamily: 'Poppins-Medium',
+      fontSize: 16,
+      lineHeight: 20,
+    },
   },
   
   spacing: {
@@ -107,6 +157,3 @@ export const theme = {
     }
   }
 };
-
-// ✅ EXPORTAÇÃO SEGURA COM VALIDAÇÃO:
-export default theme;

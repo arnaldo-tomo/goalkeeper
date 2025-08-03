@@ -62,7 +62,17 @@ import { registerForPushNotificationsAsync } from './src/utils/notifications';
 import { theme } from './src/constants/theme';
 import useAuthStore from './src/store/useAuthStore';
 
-
+import {
+  Poppins_100Thin,
+  Poppins_200ExtraLight,
+  Poppins_300Light,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
+  Poppins_800ExtraBold,
+  Poppins_900Black,
+} from '@expo-google-fonts/poppins';
 // Keep splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
@@ -398,16 +408,23 @@ export default function App() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
   const [initialRouteName, setInitialRouteName] = useState(null);
 
-  useEffect(() => {
+ useEffect(() => {
     async function loadResourcesAndDataAsync() {
       try {
         // Load splash screen
         SplashScreen.preventAutoHideAsync();
 
-        // Load fonts (if needed)
+        // 🔤 Carregar fontes Poppins
         await Font.loadAsync({
-          // Add custom fonts here if needed
-          // 'CustomFont': require('./assets/fonts/CustomFont.ttf'),
+          'Poppins-Thin': Poppins_100Thin,
+          'Poppins-ExtraLight': Poppins_200ExtraLight,
+          'Poppins-Light': Poppins_300Light,
+          'Poppins-Regular': Poppins_400Regular,
+          'Poppins-Medium': Poppins_500Medium,
+          'Poppins-SemiBold': Poppins_600SemiBold,
+          'Poppins-Bold': Poppins_700Bold,
+          'Poppins-ExtraBold': Poppins_800ExtraBold,
+          'Poppins-Black': Poppins_900Black,
         });
 
         // Initialize auth store
